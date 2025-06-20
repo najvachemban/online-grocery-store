@@ -52,9 +52,10 @@
             
             <div class="space-x-4">
                      <a href="{{ route('home') }}" class="text-blue-600 hover:underline">Home</a>
+                     <a href="{{ route('user.cart') }}" class="text-blue-600 hover:underline">Go to Cart 🛒</a>
                 @auth
                     
-                    <a href="{{ route('user.cart') }}" class="text-blue-600 hover:underline">Go to Cart 🛒</a>
+                    
 
                     <form method="POST" action="{{ route('logout') }}" class="inline">
                         @csrf
@@ -63,8 +64,8 @@
                         </button>
                     </form>
                 @else
-                    <a href="{{ route('login') }}" class="text-blue-600 hover:underline">Login</a>
-                    <a href="{{ route('register') }}" class="text-blue-600 hover:underline">Sign Up</a>
+                    
+                    <a href="{{ route('register') }}" class="text-blue-600 hover:underline">Login/Sign Up</a>
                 @endauth
             </div>
 
